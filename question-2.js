@@ -7,3 +7,11 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+let studentsMoreThanFifty;
+let newScores;
+let totalScore;
+studentsMoreThanFifty = students.filter((student) => student.score > 50);
+newScores = studentsMoreThanFifty.map((student) => +(student.score *1.10).toFixed(2))
+totalScore = newScores.reduce((total, score) => total += score);
+
+console.log(`Total score is ${totalScore}`);
